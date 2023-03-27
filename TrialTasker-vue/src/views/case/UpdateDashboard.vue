@@ -25,10 +25,12 @@
                 <option value="0">Inactivo</option>
             </select>
         </FormGroup>
+
     </Form>
 </template>
 
 <script setup>
+
 import { onMounted, ref } from 'vue';
 import HeaderAccions from '../../components/headers/HeaderAccions.vue';
 import Form from '../../components/forms/Form.vue';
@@ -69,7 +71,7 @@ onMounted(async() => {
 });
 
 </script>
-
+<!-- <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script> -->
 <style>
 
 </style>
