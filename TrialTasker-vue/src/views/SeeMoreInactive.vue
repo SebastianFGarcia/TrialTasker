@@ -5,7 +5,7 @@
             <button class='atras'>Atras</button>
         </RouterLink>
         <div class="contenido">
-            <div class="cliente" >
+            <div class="cliente">
                 <h2 class="seccion">CLIENTE:</h2>
                 <h2 class="titulos">Name:</h2>
                 <p class="informacion">{{ cases.caseStore.case_name }}</p>
@@ -80,9 +80,19 @@ import { onMounted } from 'vue';
 import { useCaseStore } from '@/stores/caseStore';
 
 const cases = useCaseStore();
-onMounted(() => {
-    cases.casesInactive()
-});
+
+// onMounted(() => {
+
+//     if(localStorage.hasOwnProperty("id")){
+//         var casoid = localStorage.getItem("id");
+//         cases.getCase(casoid);
+//     }   
+
+// })
+
+var casoid = localStorage.getItem("id");
+cases.getCase(casoid);
+
 </script>
 
 <style scoped>

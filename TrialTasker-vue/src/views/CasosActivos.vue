@@ -59,6 +59,8 @@ onMounted(() => {
     cases.casesActive();
 });
 
+localStorage.removeItem("id");
+
 document.addEventListener("keyup", e => {
     if (e.target.matches(".search")) {
         document.querySelectorAll(".caso").forEach(caso => {
